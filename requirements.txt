@@ -1,7 +1,16 @@
 Package    Version
 ---------- -------------------
+attrs      21.2.0
 certifi    2021.5.30
+coverage   5.5
+iniconfig  1.1.1
+packaging  20.9
 pip        21.1.1
+pluggy     0.13.1
+py         1.10.0
+pyparsing  2.4.7
+pytest     6.2.4
+pytest-cov 2.12.1
 setuptools 52.0.0.post20210125
+toml       0.10.2
 wheel      0.36.2
-
