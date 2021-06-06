@@ -4,7 +4,10 @@ https://contest.yandex.ru/contest/27393/problems/A/
 
 
 def freeze_mode(t_room: int, t_cond: int) -> int:
-    pass
+    if t_cond >= t_room:
+        return t_room
+    else:
+        return t_cond
 
 
 def heat_mode(t_room: int, t_cond: int) -> int:
