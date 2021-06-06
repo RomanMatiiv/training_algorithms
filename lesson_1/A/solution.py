@@ -11,7 +11,10 @@ def freeze_mode(t_room: int, t_cond: int) -> int:
 
 
 def heat_mode(t_room: int, t_cond: int) -> int:
-    pass
+    if t_cond >= t_room:
+        return t_cond
+    else:
+        return t_room
 
 
 def auto_mode(t_room: int, t_cond: int) -> int:
