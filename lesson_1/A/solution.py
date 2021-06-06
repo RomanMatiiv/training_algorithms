@@ -32,7 +32,7 @@ SELECTOR = {"freeze": freeze_mode}
 if __name__ == "__main__":
     temp_raw = input().split()
     t_room = int(temp_raw[0])
-    t_cond = int(temp_raw[0])
+    t_cond = int(temp_raw[1])
 
     work_mode_raw = input().strip().lower()
 
