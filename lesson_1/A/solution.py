@@ -3,27 +3,27 @@ https://contest.yandex.ru/contest/27393/problems/A/
 """
 
 
-def freeze_mode(temp_source: int, temp_dest: int) -> int:
+def freeze_mode(t_room: int, t_cond: int) -> int:
     pass
 
 
-def heat_mode(temp_source: int, temp_dest: int) -> int:
+def heat_mode(t_room: int, t_cond: int) -> int:
     pass
 
 
-def auto_mode(temp_source: int, temp_dest: int) -> int:
-    if temp_source > temp_dest:
-        return freeze_mode(temp_source, temp_dest)
+def auto_mode(t_room: int, t_cond: int) -> int:
+    if t_room > t_cond:
+        return freeze_mode(t_room, t_cond)
 
-    if temp_source < temp_dest:
-        return heat_mode(temp_source, temp_dest)
+    if t_room < t_cond:
+        return heat_mode(t_room, t_cond)
 
     else:
-        return temp_source
+        return t_room
 
 
-def fan_mode(temp_source: int, temp_dest) -> int:
-    return temp_source
+def fan_mode(t_room: int, t_cond) -> int:
+    return t_room
 
 
 SELECTOR = {"freeze": freeze_mode}
@@ -31,13 +31,13 @@ SELECTOR = {"freeze": freeze_mode}
 
 if __name__ == "__main__":
     temp_raw = input().split()
-    temp_source = int(temp_raw[0])
-    temp_dest = int(temp_raw[0])
+    t_room = int(temp_raw[0])
+    t_cond = int(temp_raw[0])
 
     work_mode_raw = input().strip().lower()
 
     work_mode = SELECTOR[work_mode_raw]
 
-    feature_temp = work_mode(temp_source, temp_dest)
+    feature_temp = work_mode(t_room, t_cond)
 
     print(feature_temp)

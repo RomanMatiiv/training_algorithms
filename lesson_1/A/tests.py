@@ -5,8 +5,10 @@ from solution import fan_mode
 
 
 def test_fan_mode():
-    temp_source = 10
+    t_room = 10
 
-    want_temp = temp_source
+    want_temp = t_room
+
+    assert want_temp == fan_mode(t_room, None)
 
     assert want_temp == fan_mode(temp_source, None)
