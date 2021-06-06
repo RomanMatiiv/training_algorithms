@@ -32,7 +32,11 @@ def fan_mode(t_room: int, t_cond) -> int:
     return t_room
 
 
-SELECTOR = {"freeze": freeze_mode}
+SELECTOR = {"freeze": freeze_mode,
+            "heat": heat_mode,
+            "auto": auto_mode,
+            "fan": fan_mode
+            }
 
 
 if __name__ == "__main__":
