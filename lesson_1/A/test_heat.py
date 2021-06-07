@@ -1,4 +1,4 @@
-from solution import heat_mode
+from solution_a import heat_mode
 
 
 def test_heat_mode_equal_1():

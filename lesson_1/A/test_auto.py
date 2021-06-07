@@ -1,4 +1,4 @@
-from solution import auto_mode
+from solution_a import auto_mode
 
 
 def test_auto_mode_equal_1():

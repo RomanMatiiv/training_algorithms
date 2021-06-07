@@ -1,4 +1,4 @@
-from solution import fan_mode
+from solution_a import fan_mode
 
 
 def test_fan_mode_equal_1():

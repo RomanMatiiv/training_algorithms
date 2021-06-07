@@ -1,4 +1,4 @@
-from solution import freeze_mode
+from solution_a import freeze_mode
 
 
 def test_freeze_mode_equal_1():
