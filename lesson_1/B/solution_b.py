@@ -1,4 +1,6 @@
-
+"""
+https://contest.yandex.ru/contest/27393/problems/B/
+"""
 
 def triangle_exist(a: int, b: int, c: int) -> bool:
     if (a + b) <= c:
