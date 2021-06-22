@@ -19,7 +19,7 @@ class MetalPipeline:
         self._kg_metal = kg_metal
         self._weight_work_piece = weight_work_piece
         self._weight_piece = weight_piece
-
+ 
         if self._weight_work_piece < self._weight_piece:
             raise WeightException
 
