@@ -14,21 +14,42 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __eq__(self, other):
-        if ((self.width == other.width and self.height == other.height) or
-            (self.height == other.width and self.width == other.height)):
+    # def __eq__(self, other):
+    #     if ((self.width == other.width and self.height == other.height) or
+    #         (self.height == other.width and self.width == other.height)):
+    #         return True
+    #     else:
+    #         return False
+
+    def __lt__(self, other):
+        if ((self.width == other.width and self.height < other.height) or
+            (self.height == other.height and self.width < other.width) or
+            (self.width < other.width and self.height < other.height) or
+            (self.width == other.height and self.height < other.width) or
+            (self.height == other.width and self.width < other.height) or
+            (self.width < other.height and self.height < other.width)):
             return True
         else:
             return False
 
-    def __lt__(self, other):
-        # TODO обработать случай когда стороны поменяли местами
-        if ((self.width == other.width and self.height < other.height) or
-            (self.height == other.height and self.width < other.width) or
-            (self.width < other.width and self.height < other.height)):
+    def __gt__(self, other):
+        if ((self.width == other.width and self.height > other.height) or
+            (self.height == other.height and self.width > other.width) or
+            (self.width > other.width and self.height > other.height) or
+            (self.width == other.height and self.height > other.width) or
+            (self.height == other.width and self.width > other.height) or
+            (self.width > other.height and self.height > other.width)):
             return True
         else:
             return False
+
+    # TODO переопределить оператор <=
+    def __le__(self, other):
+        raise NotImplemented
+
+    # TODO переопределить оператор >=
+    def __ge__(self, other):
+        raise NotImplemented
 
 
 def get_all_rectangle(brick: Brick) -> List[Rectangle]:

@@ -64,3 +64,31 @@ def test_get_all_rectangle():
 
     for cur_rec in get_all_rectangle(brick):
         assert cur_rec in all_possible_rectangle
+
+
+def test_case_1():
+    A, B, C, D, E = [1, 1, 1, 1, 1]
+
+    brick = Brick(A, B, C)
+    hole = Rectangle(D, E)
+
+    res = False
+    for cur_rec in get_all_rectangle(brick):
+        if cur_rec <= hole:
+            res = True
+
+    assert res is True
+
+
+def test_case_2():
+    A, B, C, D, E = [2, 2, 2, 1, 1]
+
+    brick = Brick(A, B, C)
+    hole = Rectangle(D, E)
+
+    res = False
+    for cur_rec in get_all_rectangle(brick):
+        if cur_rec <= hole:
+            res = True
+
+    assert res is False
